@@ -6,4 +6,44 @@
 
 body {
     font-family: "Edu TAS Beginner", serif;
+    background-image: url(../img/cork.png);
 }
+
+/* HEADER */
+
+header {
+    background-image: url(../img/wall.png);
+}
+
+header h1 {
+    text-align: center;
+    padding: 1.875rem;
+    font-weight: bold;
+}
+
+/* /HEADER */
+
+/* MAIN */
+
+.ms-card {
+    margin-top: 3.125rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.ms-card .img-blog {
+    max-width: 100%;
+    padding: 1.25rem;
+}
+
+.ms-card .ms-title {
+    padding: 1.25rem;
+}
+
+.ms-card .pin {
+    position: absolute;
+    left: calc(50% - 1rem);
+    top: -1.0625rem;
+}
+
+/* /MAIN */

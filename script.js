@@ -11,7 +11,7 @@ const boxCardElm = document.getElementById('ms-box-card')
                 const resultUrl = element.url;
 
                 boxCardElm.innerHTML += 
-                (`<div class="col-sm col-md-6 col-lg-4">
+                (`<div class="col-12 col-md-6 col-lg-4 mt-5">
                         <div class="ms-card">
                             <div class="pin">
                                 <img id="ms-image" src="./img/pin.svg">

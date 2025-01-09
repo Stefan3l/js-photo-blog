@@ -31,10 +31,14 @@ header h1 {
 }
 
 .ms-card {
-    margin-top: 3.125rem;
+    height: 100%;
     background-color: #fff;
     position: relative;
-    min-height: 31.25rem;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.ms-card:hover {
+    transform: rotate(15deg);
 }
 
 .ms-card .ms-img-blog {

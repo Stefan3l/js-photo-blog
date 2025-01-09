@@ -12,18 +12,23 @@ const boxCardElm = document.getElementById('ms-box-card')
 
                 boxCardElm.innerHTML += 
                 (`<div class="col-12 col-md-6 col-lg-4 mt-5">
-                        <div class="ms-card">
+                        <div class="ms-card">                          
                             <div class="pin">
                                 <img id="ms-image" src="./img/pin.svg">
                             </div>
                             <div> 
-                                <img class="ms-img-blog" src="${resultUrl}" alt="photo">
+                                <a href="#lightbox"><img class="ms-img-blog" src="${resultUrl}" alt="photo"></a>
                             </div>
                             <div class="ms-title">
                                 <h2 id="ms-title-image">${resultTitle}</h2>
                             </div>
                         </div>               
-                </div>`)
+                </div>
+                <div id="lightbox" class="lightbox">
+                    <a href="#" class="lightbox-close">&times;</a>
+                    <img src="${resultUrl}" alt="img">
+                </div>
+                `)
             })        
     })
         .catch(function()  {

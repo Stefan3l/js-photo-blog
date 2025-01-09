@@ -25,13 +25,19 @@ header h1 {
 
 /* MAIN */
 
+.ms-box {
+    margin-top: 3.125rem;
+    margin-bottom: 3.125rem;
+}
+
 .ms-card {
     margin-top: 3.125rem;
     background-color: #fff;
     position: relative;
+    min-height: 31.25rem;
 }
 
-.ms-card .img-blog {
+.ms-card .ms-img-blog {
     max-width: 100%;
     padding: 1.25rem;
 }

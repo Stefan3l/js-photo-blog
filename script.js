@@ -2,7 +2,7 @@
 
 const boxCardElm = document.getElementById('ms-box-card')
 
-
+const lightbox = document.querySelector('.lightbox')
     axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         .then(function (response) {
             
@@ -28,13 +28,12 @@ const boxCardElm = document.getElementById('ms-box-card')
                 `;
             });
 
-
+            const overlayImg = document.getElementById('overlay-img')
             const cards = document.querySelectorAll('.ms-img-blog'); 
-            const cardElm = document.querySelectorAll('.ms-card')
-            cards.forEach((resultUrl) => {
-                cardElm.addEventListener('click', function()  {
-                    overlayImg.src += resultUrl
-                    console.log(overlayImg)
+            cards.forEach((elementCard, index) => {
+                elementCard.addEventListener('click', function()  {
+                    overlayImg.src = response.data[index].url
+                    lightbox.classList.remove('lightbox-hidden')
                 })
             })
           
@@ -46,9 +45,9 @@ const boxCardElm = document.getElementById('ms-box-card')
     
 
    
-        const lightbox = document.querySelector('.lightbox')
+        
         const btnCloseElm = document.getElementById('close-btn')
-        const overlayImg = document.getElementById('overlay-img') 
+         
       
          
             btnCloseElm.addEventListener("click", function () {

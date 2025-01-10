@@ -12,7 +12,7 @@ const boxCardElm = document.getElementById('ms-box-card')
                 const lightboxId = `lightbox-${index}`;
 
                 boxCardElm.innerHTML += 
-                (`<div class="col-12 col-md-6 col-lg-4 mt-5">
+                `<div class="col-12 col-md-6 col-lg-4 mt-5">
                         <div class="ms-card">                          
                             <div class="pin">
                                 <img id="ms-image" src="./img/pin.svg">
@@ -25,18 +25,34 @@ const boxCardElm = document.getElementById('ms-box-card')
                             </div>
                         </div>               
                 </div>
-                <div id="${lightboxId}" class="lightbox">
-                    <a href="#" class="lightbox-close">&times;</a>
-                    <img src="${resultUrl}" alt="img">
-                </div>
-                `);
-            })        
+                `;
+            });
+
+
+            const cards = document.querySelectorAll('.ms-img-blog'); 
+            const cardElm = document.querySelectorAll('.ms-card')
+            cards.forEach((resultUrl) => {
+                cardElm.addEventListener('click', function()  {
+                    overlayImg.src += resultUrl
+                    console.log(overlayImg)
+                })
+            })
+          
     })
         .catch(function()  {
             boxCardElm.innerHTML += "404 Not Found"
         });
 
+    
 
-
-
+   
+        const lightbox = document.querySelector('.lightbox')
+        const btnCloseElm = document.getElementById('close-btn')
+        const overlayImg = document.getElementById('overlay-img') 
       
+         
+            btnCloseElm.addEventListener("click", function () {
+                lightbox.classList.add('lightbox-hidden')
+            });
+
+        

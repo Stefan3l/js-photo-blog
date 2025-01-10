@@ -38,7 +38,11 @@ header h1 {
 }
 
 .ms-card:hover {
-    transform: rotate(15deg);
+    transform: rotate(15deg) scale(1.1);
+}
+
+.ms-card:hover #ms-image {
+    display: none;
 }
 
 .ms-card .ms-img-blog {
@@ -61,7 +65,6 @@ header h1 {
 /* EFFETO LIGHTBOX */
 
 .lightbox {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,6 +74,10 @@ header h1 {
     justify-content: center;
     align-items: center;
     z-index: 10;
+}
+
+.lightbox-hidden {
+    display: none;
 }
 
 .lightbox .ms-card {

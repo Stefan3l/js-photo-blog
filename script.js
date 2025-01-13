@@ -21,7 +21,7 @@ const lightbox = document.querySelector('.lightbox')
                                 <img id="ms-image" src="./img/pin.svg">
                             </div>
                             <div> 
-                                // <a href="#"><img class="ms-img-blog" src="${resultUrl}" alt="photo"></a>
+                                <a href="#"><img class="ms-img-blog" src="${resultUrl}" alt="photo"></a>
                             </div>
                             <div class="ms-title">
                                 <h2 id="ms-title-image">${resultTitle}</h2>

@@ -9,7 +9,7 @@ const lightbox = document.querySelector('.lightbox')
     axios.get('https://jsonplaceholder.typicode.com/photos?_limit=6')
         .then(function (response) {
             
-            response.data.forEach((element, index) => {
+            response.data.forEach((element) => {
                 const resultTitle = element.title;
                 const resultUrl = element.url;
                 
@@ -31,6 +31,8 @@ const lightbox = document.querySelector('.lightbox')
                 `;
             });
 
+            // REMOVE DISPLAY NONE E AGGIUNGI IMG AL CLICK
+
             const overlayImg = document.getElementById('overlay-img')
             const cards = document.querySelectorAll('.ms-img-blog'); 
             cards.forEach((elementCard, index) => {
@@ -47,14 +49,12 @@ const lightbox = document.querySelector('.lightbox')
 
     
 
-   
+// BUTTON CLOSE ADD DISPLAY NONE AL CLICK   
         
-        const btnCloseElm = document.getElementById('close-btn')
-         
-      
-         
-            btnCloseElm.addEventListener("click", function () {
-                lightbox.classList.add('lightbox-hidden')
-            });
+const btnCloseElm = document.getElementById('close-btn')
+            
+    btnCloseElm.addEventListener("click", function () {
+        lightbox.classList.add('lightbox-hidden')
+    });
 
         
